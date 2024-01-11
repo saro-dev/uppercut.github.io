@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('./images/40_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Lato',sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background-size: 100% 100%;
+    }
+    .logo-box img{
+        width: 60%;
+        padding: 50px 0px;
+    }
+    .punching-bag-container {
+        position: absolute;
+        left: 50px;
+        top: 0;
+        
+    }
+    .punching-bag-container img{
+ 
+        height: 200px;
+    }
+}
+
+
+
+.logo-box img{
+    width: 40%;
+    padding: 50px 60px;
+}
+
+.location-display {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.location-icon {
+    font-size: 24px;
+    margin: 5px;
+}
+.punching-bag-container {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    
+}
+
+.punching-bag-container img{
+    height: 600px;
+    position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-size: contain;
+  transform-origin: 50% 0;
+}
+
+.punching-bag-container img:hover{
+    animation: move 1s linear ;
+}
+
+  @keyframes moveLeft {
+    0% {
+        transform: rotate(1deg) translateX(-10px);
+    }
+    10% {
+        transform: rotate(6deg) translateX(-30px);
+    }
+    50% {
+        transform: rotate(-6deg) translateX(-30px);
+    }
+    60% {
+        transform: rotate(-3deg) translateX(-10px);
+    }
+    80% {
+        transform: rotate(1deg) translateX(-5px);
+    }
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: rotate(1deg) translateX(10px);
+    }
+    10% {
+        transform: rotate(6deg) translateX(30px);
+    }
+    50% {
+        transform: rotate(-6deg) translateX(30px);
+    }
+    60% {
+        transform: rotate(-3deg) translateX(10px);
+    }
+    80% {
+        transform: rotate(1deg) translateX(5px);
+    }
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
