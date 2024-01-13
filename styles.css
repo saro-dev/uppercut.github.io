@@ -82,11 +82,15 @@ body {
 .side-nav:hover .nav-links {
     display: block; /* Display links when hovering */
 }
+.side-nav .active {
+    color: #fff; /* Text color for active link */
+    font-size: x-large;
+}
 @media screen and (max-width: 767px) {
     body {
         background-size: 100% 100%;
         overflow-x: hidden;
-        
+
     }
     .logo-box{
         position: absolute;

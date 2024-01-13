@@ -211,4 +211,22 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.removeChild(overlay2);
         }
     }
+    const currentPath = window.location.pathname;
+
+    // Find the corresponding link and add the "active" class to the i element
+    const navLinks = document.querySelectorAll('.side-nav a i');
+    navLinks.forEach(icon => {
+        const link = icon.parentElement; // Get the parent a element
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            // Home page
+            icon.classList.add('active');
+        } else if (currentPath === '/contact/' && href === '/contact/') {
+            // Contact page
+            icon.classList.add('active');
+        }
+        // Add more conditions for other pages if needed
+    });
 });
+
