@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     bag.addEventListener("mouseenter", function () {
         // Reset the message and redirecting overlay when the mouse enters the #boxing-bag element
-        removeMessage();
-        removeRedirectingOverlay();
+        // removeMessage();
+        // removeRedirectingOverlay();
          // Increment punch count
-         punchCount++;
+        //  punchCount++;
 
          // Check if the required punches have been reached
-         if (punchCount >= requiredPunches) {
+        //  if (punchCount >= requiredPunches) {
              // Display redirecting overlay and redirect to /contact.html
-             showRedirectingOverlay();
-             setTimeout(function () {
-                 window.location.href = "/contact";
-             }, 3000); // Redirect after 3 seconds
-         } else {
+            //  showRedirectingOverlay();
+            //  setTimeout(function () {
+            //      window.location.href = "/contact";
+            // }, 3000); // Redirect after 3 seconds
+        //  } else {
              // Play the audio when the mouse clicks the #boxing-bag element
              audio.currentTime = 0; // Reset audio to start if already playing
              audio.play();
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
              bag.style.animation = direction === 1 ? "moveLeft 1s linear" : "moveRight 1s linear";
  
              // Display the message
-             const remainingPunches = requiredPunches - punchCount;
-             showMessage(`Hit ${remainingPunches} more times to contact!`);
-         }
+            //  const remainingPunches = requiredPunches - punchCount;
+            //  showMessage(`Hit ${remainingPunches} more times to contact!`);
+        //  }
     });
 
     bag.addEventListener("click", function () {
@@ -44,8 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Check if the required punches have been reached
         if (punchCount >= requiredPunches) {
             // Display redirecting overlay and redirect to /contact.html
-            showRedirectingOverlay();
+            
             setTimeout(function () {
+                showRedirectingOverlay();
                 window.location.href = "/contact";
             }, 3000); // Redirect after 3 seconds
         } else {
@@ -84,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
         messageElement.style.backgroundColor = "rgba(0,0,0,0.6)";
         messageElement.style.paddingBottom = "12px";
         messageElement.style.paddingTop = "12px";
+        messageElement.style.paddingLeft = "6px";
+        messageElement.style.paddingRight="6px";
         messageElement.style.borderRadius = "5px";
         messageElement.style.transition = "opacity 1s ease-in-out"; // Transition for opacity
 
