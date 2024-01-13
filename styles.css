@@ -86,9 +86,14 @@ body {
     body {
         background-size: 100% 100%;
     }
+    .logo-box{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     .logo-box img{
         width: 60%;
-        padding: 50px 0px;
+        padding: 50px 20px;
     }
     .punching-bag-container {
         position: absolute;
