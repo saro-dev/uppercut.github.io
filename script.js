@@ -39,35 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
             showMessage(`Hit ${remainingPunches} more times to contact!`);
         }
     });
-    bag.addEventListener("mouseenter", function () {
-        // Increment punch count
-        punchCount++;
-
-        // Check if the required punches have been reached
-        if (punchCount >= requiredPunches) {
-            // Display redirecting overlay and redirect to /contact.html
-            showRedirectingOverlay();
-            setTimeout(function () {
-                window.location.href = "/contact.html";
-            }, 3000); // Redirect after 3 seconds
-        } else {
-            // Play the audio when the mouse clicks the #boxing-bag element
-            audio.currentTime = 0; // Reset audio to start if already playing
-            audio.play();
-
-            // Apply animation based on the direction
-            const mouseX = event.clientX;
-            const bagRect = bag.getBoundingClientRect();
-            const bagCenterX = bagRect.left + bagRect.width / 2;
-            const direction = mouseX > bagCenterX ? 1 : -1;
-
-            bag.style.animation = direction === 1 ? "moveLeft 1s linear" : "moveRight 1s linear";
-
-            // Display the message
-            const remainingPunches = requiredPunches - punchCount;
-            showMessage(`Hit ${remainingPunches} more times to contact!`);
-        }
-    });
 
     bag.addEventListener("animationend", function () {
         // Animation has ended
@@ -119,6 +90,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    var preloader = document.querySelector(".preloader");
+    var video = document.getElementById("preloader-video");
+
+    // Show the preloader when the document is loaded
+    preloader.style.display = "flex";
+
+    // Hide preloader after 5 seconds or when the video ends
+    var hidePreloader = function () {
+        preloader.style.display = "none";
+    };
+    
+        setTimeout(function () {
+            showRedirectingOverlay();
+        }, 4000); // Delay for 4 seconds
+
+
+    // Hide preloader when the video ends
+    video.addEventListener("ended", hidePreloader);
+
+    // Set a timeout to hide the preloader after 5 seconds
+    setTimeout(hidePreloader, 5000);
+
     function showRedirectingOverlay() {
         // Create an overlay element for redirecting animation
         const overlay = document.createElement('div');
@@ -146,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
         overlay.style.opacity = 0.4;
 
         const overlay2 = document.createElement('div');
-        overlay2.id = 'redirecting-overlay';
+        overlay2.id = 'redirecting-overlay2';
 
         // Apply styles to the overlay element
         overlay2.style.position = "fixed";
@@ -165,8 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Set styles for the redirecting animation
         overlay2.style.width = "200%";
         overlay2.style.height = "200%";
-        overlay2.style.left = "-60%";
-        overlay2.style.top = "-60%";
+        overlay2.style.left = "-70%";
+        overlay2.style.top = "-70%";
         overlay2.style.opacity = 1;
 
         // Set a timeout to remove the overlay after 3 seconds
@@ -182,10 +175,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.removeChild(overlay);
         }
     }
+
     function removeRedirectingOverlay2() {
         const overlay2 = document.getElementById('redirecting-overlay2');
         if (overlay2) {
-            document.body.removeChild(overlay);
+            document.body.removeChild(overlay2);
         }
     }
 });
