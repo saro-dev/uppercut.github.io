@@ -88,12 +88,12 @@ body {
     }
     .logo-box{
         position: absolute;
-        left: 0;
+        left: -5%;
         top: 0;
     }
     .logo-box img{
         width: 60%;
-        padding: 50px 20px;
+        padding: 50px 0px;
     }
     .punching-bag-container {
         position: absolute;
