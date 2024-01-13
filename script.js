@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         setTimeout(function () {
             showRedirectingOverlay();
-        }, 4000); // Delay for 4 seconds
+        }, 2000); // Delay for 4 seconds
 
 
     // Hide preloader when the video ends
