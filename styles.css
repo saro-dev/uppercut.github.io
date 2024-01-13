@@ -42,6 +42,7 @@ body {
     color: black;
     backdrop-filter: blur(10px); /* Adjust the blur value for the glass effect */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    z-index: 998;
 }
 
 
