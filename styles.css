@@ -7,6 +7,7 @@ body {
     height: 100vh;
     font-family: 'Lato',sans-serif;
     overflow-x: hidden;
+    
 }
 /* Other styles */
 .preloader {
@@ -45,6 +46,11 @@ body {
     .punching-bag-container img{
  
         height: 200px;
+    }
+    #preloader-video {
+        width: 130%;
+        height: auto;
+        border-top: 2px solid whitesmoke;
     }
 }
 
