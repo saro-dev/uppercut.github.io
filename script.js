@@ -8,6 +8,33 @@ document.addEventListener("DOMContentLoaded", function () {
         // Reset the message and redirecting overlay when the mouse enters the #boxing-bag element
         removeMessage();
         removeRedirectingOverlay();
+         // Increment punch count
+         punchCount++;
+
+         // Check if the required punches have been reached
+         if (punchCount >= requiredPunches) {
+             // Display redirecting overlay and redirect to /contact.html
+             showRedirectingOverlay();
+             setTimeout(function () {
+                 window.location.href = "/contact";
+             }, 3000); // Redirect after 3 seconds
+         } else {
+             // Play the audio when the mouse clicks the #boxing-bag element
+             audio.currentTime = 0; // Reset audio to start if already playing
+             audio.play();
+ 
+             // Apply animation based on the direction
+             const mouseX = event.clientX;
+             const bagRect = bag.getBoundingClientRect();
+             const bagCenterX = bagRect.left + bagRect.width / 2;
+             const direction = mouseX > bagCenterX ? 1 : -1;
+ 
+             bag.style.animation = direction === 1 ? "moveLeft 1s linear" : "moveRight 1s linear";
+ 
+             // Display the message
+             const remainingPunches = requiredPunches - punchCount;
+             showMessage(`Hit ${remainingPunches} more times to contact!`);
+         }
     });
 
     bag.addEventListener("click", function () {
@@ -19,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Display redirecting overlay and redirect to /contact.html
             showRedirectingOverlay();
             setTimeout(function () {
-                window.location.href = "/contact.html";
+                window.location.href = "/contact";
             }, 3000); // Redirect after 3 seconds
         } else {
             // Play the audio when the mouse clicks the #boxing-bag element
@@ -39,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showMessage(`Hit ${remainingPunches} more times to contact!`);
         }
     });
+
 
     bag.addEventListener("animationend", function () {
         // Animation has ended
@@ -98,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hide preloader after 5 seconds or when the video ends
     var hidePreloader = function () {
-            showRedirectingOverlay();
         preloader.style.display = "none";
     };
     
