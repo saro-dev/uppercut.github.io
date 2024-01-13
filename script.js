@@ -222,9 +222,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentPath === '/' && href === '/') {
             // Home page
             icon.classList.add('active');
-        } else if (currentPath === '/contact/' && href === '/contact/') {
+        } else if (currentPath === '/contact' && href === '/contact') {
             // Contact page
             icon.classList.add('active');
+        }
+        else{
+            console.log(icon)
         }
         // Add more conditions for other pages if needed
     });
