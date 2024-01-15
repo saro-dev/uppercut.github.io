@@ -218,22 +218,32 @@ span::selection {
     transform-origin: 50% 0;
     animation: swayAndRotate 4s infinite alternate ease-in-out;
 }
-@media only screen and (max-width: 480px){
-    .punching-bag-container {
+@media screen and (min-width: 300px) and (max-width: 480px){
+    .logo-box {
         position: absolute;
-        right:60px;
-        top: 0;
+        left: 5%;
+        top: 5%;
     }
-
-    .punching-bag-container img {
-        height: 300px;
+    .mobile-menu-icon {
+        display: block;
+    }
+    .logo-box img {
+        width: 60%;
+        padding: 50px 0px;
+    }
+    .slogan{
+        position: absolute;
+        left: 10px;
+        top: 20%;
+        margin-left: 30px;
+        color: snow;
     }
     .punching-bag-container {
-        right: 60px;
+        right: 30px;
     }
 
     .punching-bag-container img {
-        height: 300px;
+        height:400px;
     }
     .side-nav {
         right: -100%;
@@ -325,7 +335,7 @@ span::selection {
     }
 }
 /* Responsive Styles for Mobile Devices */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 481x) and (max-width: 767px) {
     body {
         background-size: 100% 100%;
         overflow-x: hidden;
