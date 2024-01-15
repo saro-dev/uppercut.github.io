@@ -1,15 +1,62 @@
+/* Font Face */
+@font-face {
+    font-family: 'CosiAzure';
+    src: url('../fonts/CosiAzure-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
 body {
     margin: 0;
     overflow: hidden;
-    background: url('./images/40_1.jpg');
+    background: url('./images/dark-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    font-family: 'Lato',sans-serif;
+    font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-    
+    cursor: auto;
 }
-/* Other styles */
+
+/* Text Selection Styles */
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+a::selection,
+p::selection,
+span::selection {
+    background-color: rgba(238, 14, 14, 0.924);
+    color: white;
+    padding: 3px 6px;
+}
+
+/* Custom Cursor Styles */
+.custom-cursor {
+    position: fixed;
+    left: -50%;
+    width: 40px;
+    height: 40px;
+    background-image: url('./images/glove.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transform: rotate(-20deg);
+    z-index: 9999;
+    display: none;
+}
+
+/* Preloader Styles */
 .preloader {
     position: fixed;
     top: 0;
@@ -27,24 +74,25 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    
 }
+
+/* Side Navigation Styles */
 .side-nav {
     position: fixed;
     top: 50%;
-    right: -190px; /* Initially hidden */
-    background-color: rgba(255, 255, 255, 0.301); /* Adjust the alpha (last value) for transparency */
+    right: -150px; /* Initially hidden */
+    background-color: rgba(255, 255, 255, 0.301);
     padding: 20px;
     width: 200px;
-    transition: right 0.3s; /* Smooth transition */
+    transition: right 0.3s;
     border-radius: 10px;
     transform: translate(0, -50%);
     color: black;
-    backdrop-filter: blur(10px); /* Adjust the blur value for the glass effect */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 998;
+    cursor: pointer;
 }
-
 
 .side-nav .nav-icon {
     cursor: pointer;
@@ -52,13 +100,13 @@ body {
 }
 
 .side-nav .nav-links {
-    display: none; /* Initially hidden */
+    display: none;
 }
 
 .side-nav a {
     display: block;
     color: black;
-    padding: 10px 10px 10px 0px ;
+    padding: 10px 10px 10px 0px;
     text-decoration: none;
     transition: background-color 0.3s;
     border-radius: 8px;
@@ -72,68 +120,57 @@ body {
 .side-nav a:hover {
     background-color: #d8d8d8;
     color: black;
-    padding:10px 20px;
+    padding: 10px 20px;
 }
 
 .side-nav:hover {
-    right: 0; /* Display the full nav when hovering */
+    right: 0;
 }
 
 .side-nav:hover .nav-links {
-    display: block; /* Display links when hovering */
+    display: block;
 }
+
 .side-nav .active {
-    color: #fff; /* Text color for active link */
+    color: #fff;
     font-size: x-large;
 }
-.side-nav a:hover .active{
+
+.side-nav a:hover .active {
     color: black;
 }
-@media screen and (max-width: 767px) {
-    body {
-        background-size: 100% 100%;
-        overflow-x: hidden;
 
-    }
-    .logo-box{
-        position: absolute;
-        left: -5%;
-        top: 0;
-    }
-    .logo-box img{
-        width: 60%;
-        padding: 50px 0px;
-    }
-    .punching-bag-container {
-        position: absolute;
-        left: 50px;
-        top: 0;
-        
-    }
-    .punching-bag-container img{
- 
-        height: 200px;
-    }
-    #preloader-video {
-        width: 130%;
-        height: auto;
-        border-top: 2px solid whitesmoke;
-    }
-}
-
-
-
-.logo-box img{
+/* Logo Box Styles */
+.logo-box img {
     width: 40%;
-    padding: 50px 60px;
+    padding: 50px 60px 0 60px;
 }
 
+.logo-box {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Slogan Styles */
+.slogan {
+    font-family: 'CosiAzure';
+    margin: 20px 0;
+    margin-left: 80px;
+}
+
+.slogan h2 {
+    color: white;
+    font-size: 24px;
+}
+
+/* Location Display Styles */
 .location-display {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+    bottom: 15px;
+    left: 15px;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     display: flex;
     align-items: center;
 }
@@ -142,26 +179,74 @@ body {
     font-size: 24px;
     margin: 5px;
 }
+
+/* Punching Bag Container Styles */
 .punching-bag-container {
     position: absolute;
     right: 150px;
     top: 0;
-    
+    cursor: none;
 }
 
-.punching-bag-container img{
+.punching-bag-container:hover ~ .custom-cursor {
+    display: block;
+}
+
+.punching-bag-container img {
     height: 600px;
     position: relative;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  background-size: contain;
-  transform-origin: 50% 0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-size: contain;
+    transform-origin: 50% 0;
+    animation: swayAndRotate 4s infinite alternate ease-in-out;
 }
 
-.punching-bag-container img:hover{
-    animation: move 1s linear ;
+/* Responsive Styles for Mobile Devices */
+@media screen and (max-width: 767px) {
+    body {
+        background-size: 100% 100%;
+        overflow-x: hidden;
+    }
+
+    .logo-box {
+        position: absolute;
+        left: -5%;
+        top: 0;
+    }
+
+    .logo-box img {
+        width: 60%;
+        padding: 50px 0px;
+    }
+
+    .punching-bag-container {
+        position: absolute;
+        left: 50px;
+        top: 0;
+    }
+
+    .punching-bag-container img {
+        height: 200px;
+    }
+
+    #preloader-video {
+        width: 130%;
+        height: auto;
+        border-top: 2px solid whitesmoke;
+    }
 }
+
+    @keyframes swayAndRotate {
+      0%, 100% {
+        transform: translateX(-10px) rotate(-2deg);
+      }
+      50% {
+        transform: translateX(10px) rotate(2deg); /* Adjust values as needed */
+      }
+    }
+
 
   @keyframes moveLeft {
     0% {

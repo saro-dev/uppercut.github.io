@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
     const bag = document.getElementById('boxing-bag');
     const audio = new Audio("./images/punch-5-166698.mp3");
     let punchCount = 0;
@@ -45,10 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (punchCount >= requiredPunches) {
             // Display redirecting overlay and redirect to /contact.html
             
-            setTimeout(function () {
-                showRedirectingOverlay();
-                window.location.href = "/contact";
-            }, 3000); // Redirect after 3 seconds
+            window.location.href = "/contact";
         } else {
             // Play the audio when the mouse clicks the #boxing-bag element
             audio.currentTime = 0; // Reset audio to start if already playing
@@ -139,78 +137,9 @@ document.addEventListener("DOMContentLoaded", function () {
     video.addEventListener("ended", hidePreloader);
 
     // Set a timeout to hide the preloader after 5 seconds
-    setTimeout(hidePreloader, 5000);
+    setTimeout(hidePreloader, 1000);
 
-    function showRedirectingOverlay() {
-        // Create an overlay element for redirecting animation
-        const overlay = document.createElement('div');
-        overlay.id = 'redirecting-overlay';
 
-        // Apply styles to the overlay element
-        overlay.style.position = "fixed";
-        overlay.style.width = "10px";
-        overlay.style.height = "10px";
-        overlay.style.borderRadius = "50%";
-        overlay.style.backgroundColor = "white";
-        overlay.style.transition = "all 3s ease"; // Transition for size and opacity
-
-        // Append the overlay element to the body
-        document.body.appendChild(overlay);
-
-        // Trigger a reflow to apply the initial styles
-        overlay.offsetHeight;
-
-        // Set styles for the redirecting animation
-        overlay.style.width = "200%";
-        overlay.style.height = "200%";
-        overlay.style.left = "-50%";
-        overlay.style.top = "-50%";
-        overlay.style.opacity = 0.4;
-
-        const overlay2 = document.createElement('div');
-        overlay2.id = 'redirecting-overlay2';
-
-        // Apply styles to the overlay element
-        overlay2.style.position = "fixed";
-        overlay2.style.width = "10px";
-        overlay2.style.height = "10px";
-        overlay2.style.borderRadius = "50%";
-        overlay2.style.backgroundColor = "white";
-        overlay2.style.transition = "all 3s ease"; // Transition for size and opacity
-
-        // Append the overlay element to the body
-        document.body.appendChild(overlay2);
-
-        // Trigger a reflow to apply the initial styles
-        overlay2.offsetHeight;
-
-        // Set styles for the redirecting animation
-        overlay2.style.width = "200%";
-        overlay2.style.height = "200%";
-        overlay2.style.left = "-70%";
-        overlay2.style.top = "-70%";
-        overlay2.style.opacity = 1;
-
-        // Set a timeout to remove the overlay after 3 seconds
-        setTimeout(function () {
-            removeRedirectingOverlay();
-            removeRedirectingOverlay2();
-        }, 3000);
-    }
-
-    function removeRedirectingOverlay() {
-        const overlay = document.getElementById('redirecting-overlay');
-        if (overlay) {
-            document.body.removeChild(overlay);
-        }
-    }
-
-    function removeRedirectingOverlay2() {
-        const overlay2 = document.getElementById('redirecting-overlay2');
-        if (overlay2) {
-            document.body.removeChild(overlay2);
-        }
-    }
     const currentPath = window.location.pathname;
 
     // Find the corresponding link and add the "active" class to the i element
@@ -231,5 +160,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         // Add more conditions for other pages if needed
     });
+    const cursor = document.getElementById("custom-cursor");
+
+    document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+    });
+
+    document.body.addEventListener("mouseover", () => {
+        cursor.classList.add("hover");
+    });
+
+    document.body.addEventListener("mouseout", () => {
+        cursor.classList.remove("hover");
+    });
+   
+    
 });
 
+
+  
