@@ -182,7 +182,7 @@ span::selection {
 /* Punching Bag Container Styles */
 .punching-bag-container {
     position: absolute;
-    right: 150px;
+    right: 200px;
     top: 0;
     cursor: none;
 }
@@ -201,7 +201,29 @@ span::selection {
     transform-origin: 50% 0;
     animation: swayAndRotate 4s infinite alternate ease-in-out;
 }
+@media only screen and (max-width: 480px){
+    .punching-bag-container {
+        position: absolute;
+        right:60px;
+        top: 0;
+    }
 
+    .punching-bag-container img {
+        height: 300px;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .punching-bag-container {
+        position: absolute;
+        right:70px;
+        top: 0;
+    }
+
+    .punching-bag-container img {
+        height: 500px;
+    }
+}
 /* Responsive Styles for Mobile Devices */
 @media screen and (max-width: 767px) {
     body {
@@ -211,8 +233,15 @@ span::selection {
 
     .logo-box {
         position: absolute;
-        left: -5%;
-        top: 0;
+        left: 5%;
+        top: 5%;
+    }
+    .slogan{
+        position: absolute;
+        left: 0;
+        top: 20%;
+        margin-left: 20px;
+        color: snow;
     }
 
     .logo-box img {
@@ -222,12 +251,12 @@ span::selection {
 
     .punching-bag-container {
         position: absolute;
-        left: 50px;
+        right:70px;
         top: 0;
     }
 
     .punching-bag-container img {
-        height: 200px;
+        height: 700px;
     }
 
     #preloader-video {
