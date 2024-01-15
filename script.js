@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Close the side navigation if the window is resized beyond the mobile range
     window.addEventListener('resize', function () {
-        const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
+        const isMobileOrTablet = window.matchMedia('(max-width: 767px)').matches;
 
         if (!isMobileOrTablet) {
             sideNav.style.right = '-150px';

@@ -219,33 +219,23 @@ span::selection {
     transform-origin: 50% 0;
     animation: swayAndRotate 4s infinite alternate ease-in-out;
 }
-@media screen and (max-width: 480px){
+
+/* smaller screen mobiles */
+@media screen and (min-width: 300px) and (max-width: 480px) {
     .logo-box {
         position: absolute;
         left: 5%;
         top: 5%;
     }
-    .mobile-menu-icon {
-        display: block;
-    }
-    .logo-box img {
-        width: 60%;
-        padding: 50px 0px;
-    }
-    .slogan{
+
+    .slogan {
         position: absolute;
         left: 10px;
         top: 20%;
         margin-left: 30px;
         color: snow;
     }
-    .punching-bag-container {
-        right: 40px;
-    }
 
-    .punching-bag-container img {
-        height:600px;
-    }
     .side-nav {
         right: -100%;
     }
@@ -254,122 +244,45 @@ span::selection {
         display: block;
     }
 
-}
-@media screen and (min-width: 768px) and (max-width: 959px) {
-    /* Responsive styles for tablets */
-    .logo-box img {
-        width: 70%;
-        padding: 50px 40px 0 40px;
-    }
-
-    .slogan {
-        margin-left: 40px;
-        margin-top: 20px;
-    }
-    .slogan h2{
-        font-size: 34px;
-    }
-    .side-nav {
-        right: -100%;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-    }
-
-    .punching-bag-container {
-        right: 90px;
-    }
-
-    .punching-bag-container img {
-        height: 800px;
-    }
-    
-}
-
-@media screen and (min-width: 960px) and (max-width: 1024px) {
-    /* Responsive styles for larger tablets */
     .logo-box img {
         width: 60%;
-        padding: 80px 50px 0 50px;
-    }
-
-    .slogan {
-        margin-left: 70px;
-        margin-top: 20px;
-    }
-    .slogan h2{
-        font-size: 34px;
+        padding: 50px 0;
     }
 
     .punching-bag-container {
-        right: 90px;
+        right: 30px !important;
     }
 
     .punching-bag-container img {
-        height: 900px;
+        height: 600px !important;
+    }
+
+    #preloader-video {
+        width: 130%;
+        height: auto;
+        border-top: 2px solid whitesmoke;
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1199px) {
-    /* Responsive styles for medium-sized screens */
-    .logo-box img {
-        width: 70%;
-        padding: 50px 60px 0 60px;
-    }
-
-    .slogan {
-        margin-left: 80px;
-        margin-top: 25px;
-    }
-    .slogan h2{
-        font-size: 39px;
-    }
-
-
-    .punching-bag-container {
-        right: 100px;
-    }
-
-    .punching-bag-container img {
-        height: 900px;
-    }
-}
-/* Responsive Styles for Mobile Devices */
+/* Mobile Devices */
 @media screen and (max-width: 767px) {
     body {
         background-size: 100% 100%;
         overflow-x: hidden;
     }
 
-    .logo-box {
-        position: absolute;
-        left: 5%;
-        top: 5%;
-    }
-    .slogan{
-        position: absolute;
-        left: 10px;
-        top: 20%;
-        margin-left: 30px;
-        color: snow;
-    }
-    .side-nav {
-        right: -100%;
-    }
-
     .mobile-menu-icon {
         display: block;
     }
+
     .logo-box img {
-        width: 60%;
-        padding: 50px 0px;
+        width: 50%;
+        padding: 50px 0;
+        margin-left: 20px;
     }
 
     .punching-bag-container {
-        position: absolute;
-        right:90px;
-        top: 0;
+        right: 90px;
     }
 
     .punching-bag-container img {
@@ -382,6 +295,107 @@ span::selection {
         border-top: 2px solid whitesmoke;
     }
 }
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .logo-box img {
+        width: 70%;
+        padding: 50px 40px 0 40px;
+    }
+
+    .slogan {
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+
+    .slogan h2 {
+        font-size: 34px;
+    }
+
+    .punching-bag-container {
+        right: 90px;
+    }
+
+    .punching-bag-container img {
+        height: 800px;
+    }
+}
+
+/* Larger Tablets */
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+    .logo-box img {
+        width: 60%;
+        padding: 80px 50px 0 50px;
+    }
+
+    .slogan {
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+
+    .slogan h2 {
+        font-size: 34px;
+    }
+
+    .punching-bag-container {
+        right: 90px;
+    }
+
+    .punching-bag-container img {
+        height: 900px;
+    }
+}
+
+/* Medium-sized Screens */
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    .logo-box img {
+        width: 70%;
+        padding: 50px 60px 0 60px;
+    }
+
+    .slogan {
+        margin-left: 80px;
+        margin-top: 25px;
+    }
+
+    .slogan h2 {
+        font-size: 39px;
+    }
+
+    .punching-bag-container {
+        right: 100px;
+    }
+
+    .punching-bag-container img {
+        height: 900px;
+    }
+}
+
+/* Larger Screens */
+@media screen and (min-width: 1200px) {
+    .logo-box img {
+        width: 80%;
+        padding: 50px 80px 0 80px;
+    }
+
+    .slogan {
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    .slogan h2 {
+        font-size: 44px;
+    }
+
+    .punching-bag-container {
+        right: 120px;
+    }
+
+    .punching-bag-container img {
+        height: 1000px;
+    }
+}
+
 
     @keyframes swayAndRotate {
       0%, 100% {
