@@ -336,7 +336,7 @@ span::selection {
     }
 }
 /* Responsive Styles for Mobile Devices */
-@media screen and (min-width: 481x) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     body {
         background-size: 100% 100%;
         overflow-x: hidden;
