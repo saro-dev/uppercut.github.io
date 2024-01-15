@@ -90,7 +90,7 @@ span::selection {
     padding: 10px 15px;
     border-radius: 50%;
     user-select: none;
-    z-index: 997;
+    z-index: 998;
 }
 /* Side Navigation Styles */
 .side-nav {
