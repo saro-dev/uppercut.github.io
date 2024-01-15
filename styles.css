@@ -218,7 +218,7 @@ span::selection {
     transform-origin: 50% 0;
     animation: swayAndRotate 4s infinite alternate ease-in-out;
 }
-@media screen and (min-width: 300px) and (max-width: 480px){
+@media screen and (max-width: 480px){
     .logo-box {
         position: absolute;
         left: 5%;
@@ -239,11 +239,11 @@ span::selection {
         color: snow;
     }
     .punching-bag-container {
-        right: 30px;
+        right: 40px;
     }
 
     .punching-bag-container img {
-        height:400px;
+        height:600px;
     }
     .side-nav {
         right: -100%;
