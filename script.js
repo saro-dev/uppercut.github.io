@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     video.addEventListener("ended", hidePreloader);
 
     // Set a timeout to hide the preloader after 5 seconds
-    setTimeout(hidePreloader, 1000);
+    setTimeout(hidePreloader, 2000);
 
 
    

@@ -374,7 +374,7 @@ span::selection {
 /* Larger Screens */
 @media screen and (min-width: 1200px) {
     .logo-box img {
-        width: 80%;
+        width: 60%;
         padding: 50px 80px 0 80px;
     }
 
@@ -388,11 +388,11 @@ span::selection {
     }
 
     .punching-bag-container {
-        right: 120px;
+        right: 140px;
     }
 
     .punching-bag-container img {
-        height: 1000px;
+        height: 600px;
     }
 }
 

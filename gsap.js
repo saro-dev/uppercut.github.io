@@ -22,4 +22,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Location display animation
     gsap.fromTo(".location-display", { x: "-190%" }, { x: "0%", duration: 1, ease: "power2.out", delay: 2.5 });
+    
 })
