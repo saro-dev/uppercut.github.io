@@ -75,13 +75,28 @@ span::selection {
     height: 100%;
     object-fit: contain;
 }
-
+/* hamburger menu bar for mobile devices */
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    border-radius: 50%;
+    user-select: none;
+}
 /* Side Navigation Styles */
 .side-nav {
     position: fixed;
     top: 50%;
     right: -150px; /* Initially hidden */
-    background-color: rgba(255, 255, 255, 0.301);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     width: 200px;
     transition: right 0.3s;
@@ -97,6 +112,7 @@ span::selection {
 .side-nav .nav-icon {
     cursor: pointer;
     font-size: 24px;
+    
 }
 
 .side-nav .nav-links {
@@ -105,16 +121,21 @@ span::selection {
 
 .side-nav a {
     display: block;
-    color: black;
+    color: snow;
     padding: 10px 10px 10px 0px;
     text-decoration: none;
     transition: background-color 0.3s;
     border-radius: 8px;
+    margin: 20px 0;
 }
 
 .side-nav a i {
     margin-right: 15px;
     font-size: large;
+    color: snow;
+}
+.side-nav a:hover i{
+    color: black;
 }
 
 .side-nav a:hover {
@@ -131,10 +152,6 @@ span::selection {
     display: block;
 }
 
-.side-nav .active {
-    color: #fff;
-    font-size: x-large;
-}
 
 .side-nav a:hover .active {
     color: black;
@@ -211,17 +228,93 @@ span::selection {
     .punching-bag-container img {
         height: 300px;
     }
+    .side-nav {
+        right: -100%;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
 
 }
-@media only screen and (min-width: 768px) and (max-width: 991px){
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    /* Responsive styles for tablets */
+    .logo-box img {
+        width: 70%;
+        padding: 50px 40px 0 40px;
+    }
+
+    .slogan {
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    .slogan h2{
+        font-size: 34px;
+    }
+    .side-nav {
+        right: -100%;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
     .punching-bag-container {
-        position: absolute;
-        right:70px;
-        top: 0;
+        right: 90px;
     }
 
     .punching-bag-container img {
-        height: 500px;
+        height: 800px;
+    }
+    
+}
+
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+    /* Responsive styles for larger tablets */
+    .logo-box img {
+        width: 60%;
+        padding: 80px 50px 0 50px;
+    }
+
+    .slogan {
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+    .slogan h2{
+        font-size: 34px;
+    }
+
+    .punching-bag-container {
+        right: 90px;
+    }
+
+    .punching-bag-container img {
+        height: 900px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    /* Responsive styles for medium-sized screens */
+    .logo-box img {
+        width: 70%;
+        padding: 50px 60px 0 60px;
+    }
+
+    .slogan {
+        margin-left: 80px;
+        margin-top: 25px;
+    }
+    .slogan h2{
+        font-size: 39px;
+    }
+
+
+    .punching-bag-container {
+        right: 100px;
+    }
+
+    .punching-bag-container img {
+        height: 900px;
     }
 }
 /* Responsive Styles for Mobile Devices */
@@ -238,12 +331,18 @@ span::selection {
     }
     .slogan{
         position: absolute;
-        left: 0;
+        left: 10px;
         top: 20%;
-        margin-left: 20px;
+        margin-left: 30px;
         color: snow;
     }
+    .side-nav {
+        right: -100%;
+    }
 
+    .mobile-menu-icon {
+        display: block;
+    }
     .logo-box img {
         width: 60%;
         padding: 50px 0px;
@@ -251,7 +350,7 @@ span::selection {
 
     .punching-bag-container {
         position: absolute;
-        right:70px;
+        right:90px;
         top: 0;
     }
 

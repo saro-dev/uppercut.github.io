@@ -140,26 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(hidePreloader, 1000);
 
 
-    const currentPath = window.location.pathname;
-
-    // Find the corresponding link and add the "active" class to the i element
-    const navLinks = document.querySelectorAll('.side-nav a i');
-    navLinks.forEach(icon => {
-        const link = icon.parentElement; // Get the parent a element
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            // Home page
-            icon.classList.add('active');
-        } else if (currentPath === '/contact' && href === '/contact') {
-            // Contact page
-            icon.classList.add('active');
-        }
-        else{
-            console.log(icon)
-        }
-        // Add more conditions for other pages if needed
-    });
+   
     const cursor = document.getElementById("custom-cursor");
 
     document.addEventListener("mousemove", (e) => {
@@ -174,7 +155,36 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.addEventListener("mouseout", () => {
         cursor.classList.remove("hover");
     });
-   
+    
+    //    NAVBAR
+    const sideNav = document.querySelector('.side-nav');
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+
+    mobileMenuIcon.addEventListener('click', function () {
+        const isOpen = sideNav.style.right === '0px';
+
+        // Use GSAP for smooth rotation animation
+        gsap.to(mobileMenuIcon, { rotation: isOpen ? 0 : -90, duration: 0.3 });
+
+        const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
+
+        if (isMobileOrTablet) {
+            // Toggle the side navigation for mobile and big tablets
+            sideNav.style.right = isOpen ? '-100%' : '0px';
+        }
+    });
+
+    // Close the side navigation if the window is resized beyond the mobile range
+    window.addEventListener('resize', function () {
+        const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
+
+        if (!isMobileOrTablet) {
+            sideNav.style.right = '-150px';
+        } else {
+            // If the menu icon is visible, set it to -100%
+            sideNav.style.right = mobileMenuIcon.style.display === 'none' ? '-150px' : '-100%';
+        }
+    });
     
 });
 
