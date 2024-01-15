@@ -228,6 +228,13 @@ span::selection {
     .punching-bag-container img {
         height: 300px;
     }
+    .punching-bag-container {
+        right: 60px;
+    }
+
+    .punching-bag-container img {
+        height: 300px;
+    }
     .side-nav {
         right: -100%;
     }
@@ -260,7 +267,7 @@ span::selection {
     }
 
     .punching-bag-container {
-        right: 60px;
+        right: 90px;
     }
 
     .punching-bag-container img {
