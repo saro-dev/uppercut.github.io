@@ -441,6 +441,9 @@ animation: slide .7s  ease-in-out;
         margin-left: 20px;
         margin-top: 25px;
     }
+    .slogan{
+        margin-top: 15px;
+    }
 
     .punching-bag-container {
         right: 90px;
