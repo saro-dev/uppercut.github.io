@@ -20,7 +20,6 @@ body {
     background: url('./images/dark-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    backdrop-filter: blur(10px);
     height: 100vh;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
