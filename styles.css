@@ -41,9 +41,7 @@ span::selection {
     padding: 3px 6px;
 }
 div {
-    user-select: none;
     outline: none;
-    pointer-events: none;
 }
 img{
     user-select: none;
