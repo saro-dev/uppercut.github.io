@@ -40,6 +40,14 @@ span::selection {
     color: white;
     padding: 3px 6px;
 }
+div {
+    user-select: none;
+    outline: none;
+}
+img{
+    user-select: none;
+  pointer-events: none;
+}
 
 /* Custom Cursor Styles */
 .custom-cursor {
