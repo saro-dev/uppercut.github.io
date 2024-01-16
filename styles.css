@@ -479,7 +479,7 @@ animation: slide .7s  ease-in-out;
 
     .slogan {
         margin-left: 40px;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .slogan h2 {
@@ -496,7 +496,7 @@ animation: slide .7s  ease-in-out;
     .about {
         width: 100%;
         max-width: 180px;
-        margin: 10px 5%;
+        margin: 40px 5%;
     }
 
     .about h3 {
@@ -517,7 +517,7 @@ animation: slide .7s  ease-in-out;
 
     .slogan {
         margin-left: 70px;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .slogan h2 {
@@ -533,12 +533,12 @@ animation: slide .7s  ease-in-out;
     }
     .about {
         width: 100%;
-        max-width: 280px;
-        margin: 10px 8%;
+        max-width: 350px;
+        margin: 40px 8%;
     }
 
     .about h3 {
-        font-size: 24px;
+        font-size: 26px;
     }
     .button{
         width: 160px;
