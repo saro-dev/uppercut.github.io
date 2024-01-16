@@ -43,6 +43,7 @@ span::selection {
 div {
     user-select: none;
     outline: none;
+    pointer-events: none;
 }
 img{
     user-select: none;
