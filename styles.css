@@ -374,9 +374,7 @@ animation: slide .7s  ease-in-out;
 /* smaller screen mobiles */
 @media screen and (min-width: 300px) and (max-width: 480px) {
     
-    .logo-box{
-        margin-top: 20px;
-    }
+    
     .slogan {
         margin-left: 30px;
         color: snow;
