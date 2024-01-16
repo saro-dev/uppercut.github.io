@@ -45,7 +45,6 @@ div {
     outline: none;
 }
 img{
-    user-select: none;
   pointer-events: none;
 }
 
