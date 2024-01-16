@@ -87,14 +87,15 @@ document.addEventListener("DOMContentLoaded", function () {
         messageElement.style.paddingRight="6px";
         messageElement.style.borderRadius = "5px";
         messageElement.style.transition = "opacity 1s ease-in-out"; // Transition for opacity
-
+        messageElement.style.fontFamily = "Lato";
+        
         // Append the message element to the body
         document.body.appendChild(messageElement);
 
         // Center the message element
         messageElement.style.position = "fixed";
         messageElement.style.left = "50%";
-        messageElement.style.top = "50%";
+        messageElement.style.top = "80%";
         messageElement.style.transform = "translate(-50%, -50%)";
 
         // Trigger a reflow to apply the initial styles

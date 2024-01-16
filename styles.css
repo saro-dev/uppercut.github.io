@@ -40,8 +40,19 @@ span::selection {
     color: white;
     padding: 3px 6px;
 }
-div {
-    outline: none;
+/* to prevent the blu highlight when clicking divs */
+div { 
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -khtml-user-select:none;
+}
+div:focus{
+    outline: none !important;
 }
 img{
     user-select: none;
@@ -184,6 +195,8 @@ img{
 .slogan h2 {
     color: white;
     font-size: 24px;
+    filter: drop-shadow(2px 2px black);
+    -webkit-text-stroke: 0.5px black;
 }
 
 /* Location Display Styles */
@@ -225,7 +238,93 @@ img{
     transform-origin: 50% 0;
     animation: swayAndRotate 4s infinite alternate ease-in-out;
 }
-
+/*Learn more div*/
+.about{
+    width: 300px;
+    margin: 10px 60px;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius:10px;
+    backdrop-filter: blur(10px);
+    transition: all .3s ease-in-out;
+}
+.about:hover{
+    border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.about h3{
+    color: white;
+    padding: 5px 8px;
+    font-size: 22px;
+}
+.button {
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #f20000;
+    --white: #fa0000;
+    --af-white: #ff0101;
+    --ch-white: #ff0b0b;
+    border-radius: 8px;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 15px;
+    border: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    transition-duration: .2s;
+    background-color: var(--ch-black);
+    margin: 8px 0;
+    text-decoration: none;
+  }
+  
+  .button:before, .button:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, 
+    var(--ch-black), var(--eer-black),
+    var(--night-rider), var(--ch-white), var(--night-rider), 
+      var(--eer-black), var(--ch-black),var(--ch-black));
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+    justify-content: end;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button:after {
+    filter: blur(50px);
+  }
+  
+  
 /* smaller screen mobiles */
 @media screen and (min-width: 300px) and (max-width: 480px) {
     .logo-box {
@@ -258,6 +357,21 @@ img{
     .punching-bag-container {
         right: 30px !important;
     }
+    .about{
+        position: absolute;
+        left:0;
+        top: 40%;
+        width: 100px;
+        margin: 10px 25px;
+    }
+    .about h3{
+        font-size: 18px;
+    }
+    .button{
+        width: 120px;
+        font-size: 12px;
+    }
+    
 
     .punching-bag-container img {
         height: 600px !important;
@@ -294,6 +408,20 @@ img{
     .punching-bag-container img {
         height: 700px;
     }
+    .about{
+        position: absolute;
+        left:0;
+        top: 40%;
+        width: 150px;
+        margin: 10px 45px;
+    }
+    .about h3{
+        font-size: 20px;
+    }
+    .button{
+        width: 120px;
+        font-size: 10px;
+    }
 
     #preloader-video {
         width: 130%;
@@ -325,6 +453,20 @@ img{
     .punching-bag-container img {
         height: 800px;
     }
+    .about{
+        position: absolute;
+        left:0;
+        top: 40%;
+        width: 180px;
+        margin: 10px 55px;
+    }
+    .about h3{
+        font-size: 24px;
+    }
+    .button{
+        width: 150px;
+        font-size: 15px;
+    }
 }
 
 /* Larger Tablets */
@@ -348,7 +490,22 @@ img{
     }
 
     .punching-bag-container img {
-        height: 900px;
+        height: 800px;
+    }
+    .about{
+        position: absolute;
+        left:0;
+        top: 50%;
+        width: 280px;
+        margin: 10px 80px;
+    }
+    .about h3{
+        font-size: 24px;
+    }
+    .button{
+        width: 160px;
+        font-size: 18px;
+        margin: 15px 0;
     }
 }
 
@@ -361,7 +518,7 @@ img{
 
     .slogan {
         margin-left: 80px;
-        margin-top: 25px;
+        margin-top: 30px;
     }
 
     .slogan h2 {
@@ -369,11 +526,27 @@ img{
     }
 
     .punching-bag-container {
-        right: 100px;
+        right: 110px;
     }
 
     .punching-bag-container img {
         height: 900px;
+    }
+    .about{
+        position: absolute;
+        left:0;
+        top: 40%;
+        width: 300px;
+        margin: 10px 25px;
+        margin-left: 90px;
+    }
+    .about h3{
+        font-size: 28px;
+    }
+    .button{
+        width: 170px;
+        font-size: 20px;
+        margin:15px 0;
     }
 }
 
@@ -399,6 +572,21 @@ img{
 
     .punching-bag-container img {
         height: 600px;
+    }
+    .about{
+        position: absolute;
+        left:0;
+        top: 50%;
+        width: 400px;
+        margin: 30px 25px;
+    }
+    .about h3{
+        font-size: 28px;
+    }
+    .button{
+        width: 160px;
+        font-size: 18px;
+        margin-top: 15px;
     }
 }
 

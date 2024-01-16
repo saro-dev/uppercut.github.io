@@ -14,8 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //slogan
     gsap.from(".slogan", { x: "-190%", duration: 1, ease: "power2.out", delay: 1 });
 
+    //about
+    gsap.from(".about", { x: "-190%", duration: 1, ease: "power2.out", delay: 1.5 });
+
     // Navbar animation
     gsap.from(".side-nav", { x: "100%", duration: 1, ease: "power2.out", delay: 2.5 });
+    // Navbar animation
+    gsap.from(".mobile-menu-icon", { x: "300%", duration: 1, ease: "power2.out", delay: 2.5 });
 
     // Punching bag animation
     gsap.fromTo(".punching-bag-container", { y: "-150%" }, { y: "0%", duration: 1, ease: "power2.out", delay: 1.9 });
