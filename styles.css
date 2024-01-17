@@ -56,21 +56,7 @@ div:focus{
 }
 img{
     user-select: none;
-}
-
-/* Custom Cursor Styles */
-.custom-cursor {
-    position: fixed;
-    left: -50%;
-    width: 40px;
-    height: 40px;
-    background-image: url('./images/glove.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    transform: rotate(-20deg);
-    z-index: 9999;
-    display: none;
+    -webkit-user-drag: none;
 }
 
 /* Preloader Styles */
@@ -221,7 +207,7 @@ img{
     position: absolute;
     right: 200px;
     top: 0;
-    cursor: none;
+    cursor: pointer;
 }
 
 .punching-bag-container:hover ~ .custom-cursor {
@@ -237,6 +223,7 @@ img{
     background-size: contain;
     transform-origin: 50% 0;
     animation: swayAndRotate 4s infinite alternate ease-in-out;
+    mix-blend-mode: lighten;
 }
 /*container*/
 .contaienr{
@@ -371,15 +358,36 @@ animation: slide .7s  ease-in-out;
         margin: 40px 25px;
     }
 }
+@media screen  and (max-width: 399px){
+
+    .punching-bag-container img{
+        height:50vh !important;
+        margin-right: 20px;
+    }
+    .about {
+        width: 100%; /* Adjust the width based on the window size */
+        max-width: 130px !important; /* Set a maximum width if needed */
+        margin-left: 10px ;
+        left: 5%;
+        transform: translateY(50%);
+    }
+    .button{
+        width: 110px !important;
+    }
+}
 /* smaller screen mobiles */
-@media screen and (min-width: 300px) and (max-width: 480px) {
+@media screen  and (max-width: 480px) {
     
-    
-    .slogan {
-        margin-left: 30px;
+    .logo-box{
+        position: absolute;
+        bottom: 170px;
+}   .slogan{
+    position: absolute;
+    bottom: 100px;
+    margin-left: 40px;
         color: snow;
         margin-top: 15px;
-    }
+}
 
     .side-nav {
         right: -100%;
@@ -400,7 +408,10 @@ animation: slide .7s  ease-in-out;
     .about {
         width: 100%; /* Adjust the width based on the window size */
         max-width: 300px; /* Set a maximum width if needed */
-        margin: 10px 10%; 
+        margin-left: 8px !important;
+        left: 5%;
+        top: 40%;
+        margin: 20% auto;
     }
 
     .about h3 {
@@ -413,7 +424,7 @@ animation: slide .7s  ease-in-out;
     
 
     .punching-bag-container img {
-        height: 70vh !important;
+        height: 60vh !important ;
     }
 
     #preloader-video {
@@ -422,6 +433,7 @@ animation: slide .7s  ease-in-out;
         border-top: 2px solid whitesmoke;
     }
 }
+
 
 /* Mobile Devices */
 @media screen and (max-width: 767px) {
@@ -442,10 +454,11 @@ animation: slide .7s  ease-in-out;
     }
     .slogan{
         margin-top: 15px;
+        margin-left: 35px;
     }
 
     .punching-bag-container {
-        right: 90px;
+        right: 40px;
     }
 
     .punching-bag-container img {
@@ -454,7 +467,6 @@ animation: slide .7s  ease-in-out;
     .about {
         width: 100%;
         max-width: 150px;
-        margin: 10px 10%;
     }
 
     .about h3 {
@@ -475,8 +487,9 @@ animation: slide .7s  ease-in-out;
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 959px) {
     .logo-box img {
-        width: 70%;
+        width: 60%;
         padding: 50px 40px 0 40px;
+        margin-top: 100px;
     }
 
     .slogan {
@@ -489,16 +502,17 @@ animation: slide .7s  ease-in-out;
     }
 
     .punching-bag-container {
-        right: 90px;
+        right: 70px !important;
     }
 
     .punching-bag-container img {
-        height: 80vh;
+        height: 70vh;
+        right: -10px;
     }
     .about {
         width: 100%;
         max-width: 180px;
-        margin: 40px 5%;
+        margin:0 5% 40px 5%;
     }
 
     .about h3 {
@@ -531,12 +545,12 @@ animation: slide .7s  ease-in-out;
     }
 
     .punching-bag-container img {
-        height: 80vh;
+        height: 70vh;
     }
     .about {
         width: 100%;
         max-width: 350px;
-        margin: 40px 8%;
+        margin: 0 8% 40px 8%;
     }
 
     .about h3 {
@@ -631,10 +645,10 @@ animation: slide .7s  ease-in-out;
 
     @keyframes swayAndRotate {
       0%, 100% {
-        transform: translateX(-10px) rotate(-2deg);
+        transform: translateX(0px) rotate(-2deg);
       }
       50% {
-        transform: translateX(10px) rotate(2deg); /* Adjust values as needed */
+        transform: translateX(0px) rotate(2deg); /* Adjust values as needed */
       }
     }
 

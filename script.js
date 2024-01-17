@@ -6,21 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const requiredPunches = 5;
 
     bag.addEventListener("mouseenter", function () {
-        // Reset the message and redirecting overlay when the mouse enters the #boxing-bag element
-        // removeMessage();
-        // removeRedirectingOverlay();
-         // Increment punch count
-        //  punchCount++;
 
-         // Check if the required punches have been reached
-        //  if (punchCount >= requiredPunches) {
-             // Display redirecting overlay and redirect to /contact.html
-            //  showRedirectingOverlay();
-            //  setTimeout(function () {
-            //      window.location.href = "/contact";
-            // }, 3000); // Redirect after 3 seconds
-        //  } else {
-             // Play the audio when the mouse clicks the #boxing-bag element
              audio.currentTime = 0; // Reset audio to start if already playing
              audio.play();
  
@@ -31,11 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
              const direction = mouseX > bagCenterX ? 1 : -1;
  
              bag.style.animation = direction === 1 ? "moveLeft 1s linear" : "moveRight 1s linear";
- 
-             // Display the message
-            //  const remainingPunches = requiredPunches - punchCount;
-            //  showMessage(`Hit ${remainingPunches} more times to contact!`);
-        //  }
+
     });
 
     bag.addEventListener("click", function () {
@@ -142,20 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
    
-    const cursor = document.getElementById("custom-cursor");
 
-    document.addEventListener("mousemove", (e) => {
-        cursor.style.left = e.pageX + "px";
-        cursor.style.top = e.pageY + "px";
-    });
-
-    document.body.addEventListener("mouseover", () => {
-        cursor.classList.add("hover");
-    });
-
-    document.body.addEventListener("mouseout", () => {
-        cursor.classList.remove("hover");
-    });
     
     //    NAVBAR
     const sideNav = document.querySelector('.side-nav');
