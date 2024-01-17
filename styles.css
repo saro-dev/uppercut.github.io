@@ -382,7 +382,9 @@ img{
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 959px) {
 
-
+    .location-display {
+        font-size: 22px;
+    }
     .slogan {
         margin-left: 40px;
         margin-top: 20%;
@@ -405,7 +407,9 @@ img{
 /* Larger Tablets */
 @media screen and (min-width: 960px) and (max-width: 1024px) {
 
-
+    .location-display {
+        font-size: 24px;
+    }
     .slogan {
         margin-left: 70px;
         margin-top: 20%;
@@ -449,7 +453,9 @@ img{
 /* Larger Screens */
 @media screen and (min-width: 1200px) {
 
-
+    .location-display {
+        font-size: 26px;
+    }
     .slogan {
         margin-left: 100px;
         margin-top: 10%;
