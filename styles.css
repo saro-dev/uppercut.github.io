@@ -201,7 +201,6 @@ img{
 /* Slogan Styles */
 .slogan {
     margin: 20px 0;
-    margin-left: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,7 +213,7 @@ img{
 .slogan h2 {
     color: white;
     text-transform: uppercase;
-    font-family: 'aware',sans-serif;
+    font-family: 'aware', sans-serif;
     font-size: 24px;
     filter: drop-shadow(2px 2px black);
     -webkit-text-stroke: 0.5px black;
@@ -274,9 +273,9 @@ img{
     .slogan{
         position: absolute;
         top: 45%;
-        left: 10px ;
-        max-width: 200px ;
-
+        left: 10px;
+        max-width: 200px;
+        margin-left: 0; /* Adjusted */
     }
     .slogan h2{
         font-size: 24px;
@@ -287,6 +286,7 @@ img{
         top: 45%;
         left: 20px;
         margin-top: 20px;
+        margin-left: 0; /* Adjusted */
     }
     .slogan h2{
         font-size: 26px;
@@ -304,16 +304,17 @@ img{
 /* smaller screen mobiles */
 @media screen  and (max-width: 480px) {
     
-   .slogan{
-    position: absolute;
-    top: 40%;
-    margin-left:40px ;
-    color: snow;
-    max-width: 280px;
-}
-.slogan h2{
-    font-size: 28px;
-}
+    .slogan{
+        position: absolute;
+        top: 40%;
+        margin-left: 40px;
+        color: snow;
+        max-width: 280px;
+    }
+    .slogan h2{
+        font-size: 28px;
+        margin-left: 0; /* Adjusted */
+    }
 
     .side-nav {
         right: -100%;
@@ -342,7 +343,6 @@ img{
     }
 }
 
-
 /* Mobile Devices */
 @media screen and (max-width: 767px) {
     body {
@@ -357,6 +357,7 @@ img{
     .slogan{
         margin: 40% 20px 0 0px;
         max-width: 280px;
+        margin-left: 0; /* Adjusted */
     }
     .slogan h2{
         font-size: 30px;
@@ -388,7 +389,6 @@ img{
         margin-top: 30%;
         max-width: 350px;
     }
-
     .slogan h2 {
         font-size: 36px;
     }
@@ -412,7 +412,6 @@ img{
         margin-top: 20%;
         max-width: 400px;
     }
-
     .slogan h2 {
         font-size: 38px;
     }
@@ -435,7 +434,6 @@ img{
         margin-top: 20%;
         max-width: 400px;
     }
-
     .slogan h2 {
         font-size: 39px;
     }
@@ -458,7 +456,6 @@ img{
         margin-top: 10%;
         max-width: 400px;
     }
-
     .slogan h2 {
         font-size: 44px;
     }
