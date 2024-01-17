@@ -278,7 +278,7 @@ img{
         margin-left: 0; /* Adjusted */
     }
     .slogan h2{
-        font-size: 24px;
+        font-size: 24px !important;
     }
 }
 @media screen  and (max-width: 399px){
@@ -306,7 +306,7 @@ img{
     
     .slogan{
         position: absolute;
-        top: 40%;
+        top: 55%;
         margin-left: 40px;
         color: snow;
         max-width: 280px;
@@ -355,7 +355,7 @@ img{
     }
 
     .slogan{
-        margin: 40% 20px 0 0px;
+        margin: 10% 20px 0 0px;
         max-width: 280px;
         margin-left: 0; /* Adjusted */
     }
@@ -386,8 +386,8 @@ img{
 
     .slogan {
         margin-left: 40px;
-        margin-top: 30%;
-        max-width: 350px;
+        margin-top: 20%;
+        max-width: 320px;
     }
     .slogan h2 {
         font-size: 36px;
@@ -421,7 +421,7 @@ img{
     }
 
     .punching-bag-container img {
-        height: 70vh;
+        height: 75vh;
     }
 
 }
@@ -465,7 +465,7 @@ img{
     }
 
     .punching-bag-container img {
-        height: 70vh;
+        height: 80vh;
     }
 
 }
