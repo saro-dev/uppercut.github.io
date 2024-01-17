@@ -383,7 +383,7 @@ img{
 @media screen and (min-width: 768px) and (max-width: 959px) {
 
     .location-display {
-        font-size: 22px;
+        font-size: 21px;
     }
     .slogan {
         margin-left: 40px;
@@ -407,7 +407,7 @@ img{
 @media screen and (min-width: 960px) and (max-width: 1024px) {
 
     .location-display {
-        font-size: 24px;
+        font-size: 22px;
     }
     .slogan {
         margin-left: 70px;
@@ -453,7 +453,7 @@ img{
 @media screen and (min-width: 1200px) {
 
     .location-display {
-        font-size: 26px;
+        font-size: 24px;
     }
     .slogan {
         margin-left: 100px;
