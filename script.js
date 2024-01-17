@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     
     const bag = document.getElementById('boxing-bag');
-    const audio = new Audio("./images/punch-5-166698.mp3");
+    const audio = new Audio("./images/punch-sound.mp3");
     let punchCount = 0;
     const requiredPunches = 5;
 

@@ -221,6 +221,7 @@ img{
     margin: 0 auto;
     text-align: center;
     background-size: contain;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.545));
     transform-origin: 50% 0;
     animation: swayAndRotate 4s infinite alternate ease-in-out;
     mix-blend-mode: lighten;
@@ -623,7 +624,7 @@ animation: slide .7s  ease-in-out;
     }
 
     .punching-bag-container img {
-        height: 80vh;
+        height: 70vh;
     }
     .about {
         width: 100%;
@@ -661,7 +662,7 @@ animation: slide .7s  ease-in-out;
         transform: rotate(6deg) translateX(-30px);
     }
     50% {
-        transform: rotate(-6deg) translateX(-30px);
+        transform: rotate(-6deg) translateX(0px);
     }
     60% {
         transform: rotate(-3deg) translateX(-10px);
@@ -679,7 +680,7 @@ animation: slide .7s  ease-in-out;
         transform: rotate(1deg) translateX(10px);
     }
     10% {
-        transform: rotate(6deg) translateX(30px);
+        transform: rotate(6deg) translateX(0px);
     }
     50% {
         transform: rotate(-6deg) translateX(30px);
