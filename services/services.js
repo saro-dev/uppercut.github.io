@@ -1,6 +1,6 @@
 // GSAP animation for preloader
 gsap.fromTo('.preloader', {
-    left: '-100%', // start from left -100%
+    left: '0%', // start from left -100%
     opacity: 1
 }, {
     duration: 1,

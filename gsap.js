@@ -27,5 +27,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Location display animation
     gsap.fromTo(".location-display", { x: "-190%" }, { x: "0%", duration: 1, ease: "power2.out", delay: 2.5 });
-    
+    gsap.fromTo(".getintouch", { x: "190%" }, { x: "0%", duration: 1, ease: "power2.out", delay: 2.5 });
+
+   // GSAP Animation for Section Two
+// GSAP Animation for Section Two
+
+const locationDisplay = document.querySelector(".location-display");
+
+// Initial position of the location display
+gsap.set(locationDisplay, { x: 0 });
+
+// Listen for scroll events
+window.addEventListener("scroll", function () {
+    // Check if the user has scrolled down a little bit
+    if (window.scrollY > 50) { // Adjust the threshold as needed
+        // Animate the location display to move completely to the left and hide it
+        gsap.to(locationDisplay, { x: "-120%", duration: 0.5, ease: "power2.out" });
+    } else {
+        // Animate the location display to move back to its original position
+        gsap.to(locationDisplay, { x: 0, duration: 0.5, ease: "power2.out" });
+    }
+});
+
+const getintouch = document.querySelector(".getintouch");
+// Initial position of the location display
+gsap.set(getintouch, { x: 0 });
+
+// Listen for scroll events
+window.addEventListener("scroll", function () {
+    // Check if the user has scrolled down a little bit
+    if (window.scrollY > 50) { // Adjust the threshold as needed
+        // Animate the location display to move completely to the left and hide it
+        gsap.to(getintouch, { x: "120%", duration: 0.5, ease: "power2.out" });
+        
+    } else {
+        // Animate the location display to move back to its original position
+        gsap.to(getintouch, { x: 0, duration: 0.5, ease: "power2.out" });
+        
+    }
+});
+
+gsap.to("#typewriter", {
+    duration: 4,
+    text: {
+        value: "",
+        type: "chars",
+        delay: 0.1
+    },
+    ease: "none"
+});
+
 })

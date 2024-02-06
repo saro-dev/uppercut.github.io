@@ -120,43 +120,65 @@ document.addEventListener("DOMContentLoaded", function () {
     video.addEventListener("ended", hidePreloader);
 
     // Set a timeout to hide the preloader after 5 seconds
-    setTimeout(hidePreloader, 2000);
+    setTimeout(hidePreloader, 3000);
 
+
+   const neon= document.getElementById('neonthis1');
+   neon.novacancy({
+      'blinkMin': 0.2,
+      'blinkMax': 0.6,
+      'loopMin': 2,
+      'loopMax': 2,
+      'color': '#FF6700',
+      'glow': null,
+      'off': 2,
+      'blink': 0,
+      'autoOn': true
+    })
 
    
-
-    
-    //    NAVBAR
-    const sideNav = document.querySelector('.side-nav');
-    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-
-    mobileMenuIcon.addEventListener('click', function () {
-        const isOpen = sideNav.style.right === '0px';
-
-        // Use GSAP for smooth rotation animation
-        gsap.to(mobileMenuIcon, { rotation: isOpen ? 0 : -90, duration: 0.3 });
-
-        const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
-
-        if (isMobileOrTablet) {
-            // Toggle the side navigation for mobile and big tablets
-            sideNav.style.right = isOpen ? '-100%' : '0px';
-        }
-    });
-
-    // Close the side navigation if the window is resized beyond the mobile range
-    window.addEventListener('resize', function () {
-        const isMobileOrTablet = window.matchMedia('(max-width: 767px)').matches;
-
-        if (!isMobileOrTablet) {
-            sideNav.style.right = '-150px';
-        } else {
-            // If the menu icon is visible, set it to -100%
-            sideNav.style.right = mobileMenuIcon.style.display === 'none' ? '-150px' : '-100%';
-        }
-    });
     
 });
 
+document.addEventListener("DOMContentLoaded", function () {
 
+  const sideNav = document.querySelector('.side-nav');
+      const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
   
+      mobileMenuIcon.addEventListener('click', function () {
+          const isOpen = sideNav.style.right === '0px';
+  
+          // Use GSAP for smooth rotation animation
+          gsap.to(mobileMenuIcon, { rotation: isOpen ? 0 : -90, duration: 0.3 });
+  
+          const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
+  
+          if (isMobileOrTablet) {
+              // Toggle the side navigation for mobile and big tablets
+              sideNav.style.right = isOpen ? '-100%' : '0px';
+          }
+      });
+  
+      // Close the side navigation if the window is resized beyond the mobile range
+      window.addEventListener('resize', function () {
+          const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
+  
+          if (!isMobileOrTablet) {
+              sideNav.style.right = '-150px';
+          } else {
+              // If the menu icon is visible, set it to -100%
+              sideNav.style.right = mobileMenuIcon.style.display === 'none' ? '-150px' : '-100%';
+          }
+      });
+  })
+  document.addEventListener("DOMContentLoaded", function() {
+    var scrollDownMouse = document.querySelector(".scroll-down-mouse");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 100) { // Adjust as needed
+            scrollDownMouse.style.display = "none"; // Hide the scroll-down mouse element
+        } else {
+            scrollDownMouse.style.display = "block"; // Show the scroll-down mouse element
+        }
+    });
+});
