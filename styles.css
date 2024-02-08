@@ -18,6 +18,12 @@
     font-style: normal;
 }
 @font-face {
+  font-family: 'gobold';
+  src: url('./fonts/Gobold\ Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
     font-family: 'aware';
     src: url('./fonts/AwareBold-qZo3x.ttf') format('opentype');
     font-weight: normal;
@@ -47,7 +53,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 /*  Styles */
  body{
     margin: 0;
@@ -235,51 +243,7 @@ img{
     color: #007bff; /* Change color on hover */
 }
 
-/* Slogan Styles */
-/* .slogan {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    max-width: 400px;
-}
 
-.slogan h2 {
-    color: white;
-    text-transform: uppercase;
-    font-family: 'aware', sans-serif;
-    font-size: 24px;
-    filter: drop-shadow(2px 2px black);
-    -webkit-text-stroke: 0.5px black;
-} */
-
-/* Punching Bag Container Styles */
-/* .punching-bag-container {
-    position: absolute;
-    right: 200px;
-    top: 0;
-    cursor: pointer;
-}
-
-.punching-bag-container:hover ~ .custom-cursor {
-    display: block;
-}
-
-.punching-bag-container img {
-    height:80vh;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    background-size: contain;
-    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.545));
-    transform-origin: 50% 0;
-    animation: swayAndRotate 4s infinite alternate ease-in-out;
-    mix-blend-mode: lighten;
-} */
 
 .container{
   display: flex;
@@ -471,6 +435,7 @@ img{
 .parent .child2 img{
   width: 400px;
   height: auto;
+  mix-blend-mode: darken;
 }
 #part-three{
   padding: 50px;
@@ -721,9 +686,7 @@ img{
       display: flex;
       flex-direction: column !important;
     }
-    .parent .child2 img{
-      width: 250px;
-    }
+    
     .location-display{
       font-size: 14px;
     }
@@ -732,6 +695,17 @@ img{
     }
     .social a{
       font-size: 14px;
+    }
+    #part-two{
+      padding: 30px;
+    }
+    .parent .child1 h1{
+      font-size: 30px;
+    }
+    .parent .child2 img{
+      width: 100%;
+      margin: 8px  auto;
+      border-radius: 10px;
     }
 }
 
