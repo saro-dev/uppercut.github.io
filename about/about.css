@@ -257,6 +257,9 @@ h1 {
     padding: 60px 100px 30px 100px;
     align-items: center;
 }
+#training{
+  border-radius: 0px 0px 20px 20px;
+}
 .third-content .training .details{
     max-width: 500px;
     padding: 10px;
@@ -283,12 +286,34 @@ h1 {
     height: auto;
     border-radius: 10px;
 }
+.redirect{
+  margin: 20px 0;
+  display: flex;
+justify-content: center;
+}
+.redirect h3{
+  font-family: 'Resagnito',sans-serif;
+  font-weight: bold;
+}
+.redirect h3 a{
+  text-decoration: none;
+  background-color: plum;
+  border-radius: 12px;
+  padding: 5px 8px;
+  color: maroon;
+  transition: all .3s ease-in-out;
+}
+.redirect h3 a:hover{
+  background-color: maroon;
+  color: white;
+}
 
 @media screen and (max-width: 767px){
   .main-content{
     padding: 10px 10px;
     height: auto;
     border-radius: 0 0 25px 25px;
+    margin: 10px 15px 0 15px;
   }
   .main-content .top{
     padding: 0px 10px;
@@ -324,6 +349,7 @@ h1 {
     padding: 15px;
     border-radius: 25px 25px 0 0;
     flex-direction: column;
+    margin: 0px 15px ;
   }
   .secondary-content .details p{
     font-size: 16px;
@@ -332,6 +358,10 @@ h1 {
   }
   .profile-card{
     margin: 60px 0;
+  }
+  .third-content{
+    margin: 0px 15px;
+    border-radius: 0 0 18px 18px;
   }
   .third-content .training{
     flex-direction: column;
@@ -343,5 +373,143 @@ h1 {
   }
   .third-content .training:nth-child(2){
     flex-direction: column-reverse;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px){
+  .main-content{
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 0 0 25px 25px;
+    margin: 10px 15px 0 15px;
+  }
+  .main-content .top{
+    justify-content: space-evenly;
+  }
+  .main-content .top .links a{
+    font-size: 14px;
+    margin: 10px 8px 0px 8px;
+  }
+  .hero .kid1{
+    width: 90%;
+  }
+  .kid1 h1{
+    font-size: 90px;
+  }
+  .kid1 h1 span{
+    font-size: 90px;
+  }
+  .kid2{
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+  }
+  .secondary-content{
+    padding: 15px;
+    border-radius: 25px 25px 0 0;
+    flex-direction: column;
+    margin: 0px 15px ;
+  }
+  .secondary-content .profile-card{
+    margin: 60px 0;
+  }
+
+  .third-content{
+    margin: 0px 15px;
+    border-radius: 0 0 20px 20px;
+  }
+  .third-content .training{
+    flex-direction: column;
+    padding: 10px;
+  }
+  .third-content .training .image{
+    width: 70%;
+    height: auto;
+  }
+  .third-content .training:nth-child(2){
+    flex-direction: column-reverse;
+  }
+  #training{
+    border-radius: 0px 0px 20px 20px;
+  }
+
+}
+@media screen and (min-width: 960px) and (max-width: 1024px){
+  .main-content{
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 0 0 25px 25px;
+    margin: 20px 25px 0 25px;
+  }
+  .hero .kid1{
+    width: 90%;
+    height: auto;
+  }
+  .hero .kid1 h3{
+    max-width: 80%;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  .secondary-content{
+    padding: 25px 15px;
+    border-radius: 25px 25px 0 0;
+    flex-direction: row;
+    margin: 0px 25px ;
+  }
+  .third-content{
+    margin: 0 25px;
+    border-radius: 0 0 25px 25px;
+  }
+  .third-content .training{
+    flex-direction: row;
+    padding: 10px;
+  }
+  .third-content .training .image{
+    width: 350px;
+    height: auto;
+  }
+  
+}
+@media screen and (min-width: 1025px) and (max-width: 1199px){
+  .main-content{
+    padding: 10px 10px;
+    height: auto;
+    border-radius: 0 0 25px 25px;
+    margin: 20px 25px 0 25px;
+  }
+  .hero .kid1{
+    width: 80%;
+    height: auto;
+  }
+  .hero .kid2{
+    width: 80%;
+  }
+  .hero .kid1 h1{
+    font-size: 80px;
+  }
+  .hero .kid1 h1 span{
+    font-size: 80px;
+  }
+  .hero .kid1 h3{
+    max-width: 80%;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  .secondary-content{
+    padding: 25px 15px;
+    border-radius: 25px 25px 0 0;
+    flex-direction: row;
+    margin: 0px 25px ;
+  }
+  .third-content{
+    margin: 0 25px;
+    border-radius: 0 0 25px 25px;
+  }
+  .third-content .training{
+    flex-direction: row;
+    padding: 10px;
+  }
+  .third-content .training .image{
+    width: 350px;
+    height: auto;
   }
 }

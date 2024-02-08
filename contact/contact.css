@@ -41,3 +41,279 @@ h1{
 .preloader span{
     color: orangered;
 }
+
+.bodyyy{
+    background: url(../images/pexels-marek-piwnicki-10050570.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact-container{
+    background-color: rgb(16, 16, 16);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+}
+.contact-container .context h1{
+    font-family: 'aware',sans-serif;
+    text-transform: uppercase;
+}
+.contact-container .context h1 span{
+    background: url(../images/pexels-mo-eid-9934462.jpg);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.contact-container .context h3{
+    margin: 15px auto;
+    text-align: center;
+    font-family: 'Resagnito',sans-serif;
+    color: rgb(201, 201, 201);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container .context h3 img{
+    height: 70px;
+    width: auto;
+    margin: 0 15px;
+}
+.contact-container .context h3 span{
+    font-family: 'gobold',sans-serif;
+    /* background: url(../images/pexels-mo-eid-9934462.jpg);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 40px;
+
+}
+.contact-form-container {
+  background: #F4F3F3;
+  font-family: "Resagnito", sans-serif;
+}
+
+.contact-us {
+  position: relative;
+  width: 250px;
+  background: #C3E0EC;
+  overflow: hidden;
+}
+.contact-us:before {
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  left: -100px;
+  height: 250px;
+  width: 400px;
+  background: #F8B7D8;
+  transform: rotate(25deg);
+}
+.contact-us:after {
+  position: absolute;
+  content: "";
+  bottom: -80px;
+  right: -100px;
+  height: 270px;
+  width: 400px;
+  background: #9ED8EB;
+  transform: rotate(-25deg);
+}
+
+.contact-header {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 120px;
+}
+.contact-header h1 {
+  font-size: 1.5rem;
+  color: black;
+}
+.contact-header h1 span{
+    letter-spacing: -3px;
+}
+.contact-header h3{
+    color: black;
+}
+
+.social-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 75px;
+  z-index: 1;
+  width: 150px;
+}
+.social-bar ul {
+  list-style-type: none;
+}
+.social-bar ul li {
+  display: inline-block;
+  color: rgb(24, 24, 24);
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  margin-right: -4px;
+  font-size: 1.2rem;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  color: #444;
+}
+.header h1 {
+  font-weight: normal;
+  color: black;
+}
+.header h2 {
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.address, .email, .phone {
+  text-align: center;
+  padding: 10px 0;
+  color: #444;
+}
+.address h3, .email h3, .phone h3 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.address i, .email i, .phone i {
+  color: #F8B7D8;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+form {
+  position: relative;
+  width: 440px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+form input, form textarea {
+  background: white;
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  border: 0;
+}
+form input {
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+  font-size: 1rem;
+  color: rgba(68, 68, 68, 0.8);
+}
+form textarea {
+  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: lato;
+  color: rgba(68, 68, 68, 0.8);
+}
+form button {
+  display: block;
+  height: 40px;
+  width: 250px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 20px;
+  bottom: -20px;
+  background: #9ED8EB;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 300;
+  outline: none;
+}
+
+.contact-form {
+  padding-bottom: 40px;
+}
+
+
+.contact-form-container {
+  width: 800px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr;
+  grid-template-areas: "contact-us header header header" "contact-us address phone email" "contact-us contact-form contact-form contact-form";
+}
+
+.contact-us {
+  grid-area: contact-us;
+}
+
+.header {
+  grid-area: header;
+}
+
+.address {
+  grid-area: address;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.email {
+  grid-area: email;
+}
+
+.contact-form {
+  grid-area: contact-form;
+}
+.contact-form-container .links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+}
+.links div{
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 767px){
+    .contact-container .context{
+        max-width: 90%;
+        margin: 10px auto;
+    }
+    .contact-container .context h1{
+        font-size: 40px;
+    }
+    .contact-container .context h3{
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+    }
+    .contact-container .context h3 img{
+        height: 50px;
+        width: auto;
+    }
+    .contact-container .context h3 span{
+        display: none;
+    }
+    .contact-form-container{
+        width: 100%;
+    }
+    .contact-us{
+        width: 50%;
+    }
+    .header{
+        margin: 0 auto;
+    }
+    form{
+        width: 90%;
+    }
+    
+}
