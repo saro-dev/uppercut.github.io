@@ -295,4 +295,7 @@ h1{
   .contact-form-container .form-content .contact-form{
     width: 95%;
   }
+  .contact-container{
+    padding: 20px 0;
+  }
 }
