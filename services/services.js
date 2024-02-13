@@ -20,34 +20,90 @@ gsap.fromTo('.preloader', {
         });
     }
 });
-document.addEventListener("DOMContentLoaded", function () {
 
-    const sideNav = document.querySelector('.side-nav');
-        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-    
-        mobileMenuIcon.addEventListener('click', function () {
-            const isOpen = sideNav.style.right === '0px';
-    
-            // Use GSAP for smooth rotation animation
-            gsap.to(mobileMenuIcon, { rotation: isOpen ? 0 : -90, duration: 0.3 });
-    
-            const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
-    
-            if (isMobileOrTablet) {
-                // Toggle the side navigation for mobile and big tablets
-                sideNav.style.right = isOpen ? '-100%' : '0px';
-            }
+
+let i=2;
+
+	
+$(document).ready(function(){
+    var radius = 200;
+    var fields = $('.itemDot');
+    var container = $('.dotCircle');
+    var width = container.width();
+radius = width/2.5;
+
+     var height = container.height();
+    var angle = 0, step = (2*Math.PI) / fields.length;
+    fields.each(function() {
+        var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+        var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+        if(window.console) {
+            console.log($(this).text(), x, y);
+        }
+        
+        $(this).css({
+            left: x + 'px',
+            top: y + 'px'
         });
+        angle += step;
+    });
     
-        // Close the side navigation if the window is resized beyond the mobile range
-        window.addEventListener('resize', function () {
-            const isMobileOrTablet = window.matchMedia('(max-width: 959px)').matches;
     
-            if (!isMobileOrTablet) {
-                sideNav.style.right = '-150px';
-            } else {
-                // If the menu icon is visible, set it to -100%
-                sideNav.style.right = mobileMenuIcon.style.display === 'none' ? '-150px' : '-100%';
-            }
+    $('.itemDot').click(function(){
+        
+        var dataTab= $(this).data("tab");
+        $('.itemDot').removeClass('active');
+        $(this).addClass('active');
+        $('.CirItem').removeClass('active');
+        $( '.CirItem'+ dataTab).addClass('active');
+        i=dataTab;
+        
+        $('.dotCircle').css({
+            "transform":"rotate("+(360-(i-1)*36)+"deg)",
+            "transition":"2s"
         });
-    })
+        $('.itemDot').css({
+            "transform":"rotate("+((i-1)*36)+"deg)",
+            "transition":"1s"
+        });
+        
+        
+    });
+    
+    setInterval(function(){
+        var dataTab= $('.itemDot.active').data("tab");
+        if(dataTab>6||i>6){
+        dataTab=1;
+        i=1;
+        }
+        $('.itemDot').removeClass('active');
+        $('[data-tab="'+i+'"]').addClass('active');
+        $('.CirItem').removeClass('active');
+        $( '.CirItem'+i).addClass('active');
+        i++;
+        
+        
+        $('.dotCircle').css({
+            "transform":"rotate("+(360-(i-2)*36)+"deg)",
+            "transition":"2s"
+        });
+        $('.itemDot').css({
+            "transform":"rotate("+((i-2)*36)+"deg)",
+            "transition":"1s"
+        });
+        
+        }, 3000);
+    
+});
+
+
+$("#view").click(function(){
+    $(".services-container .secondary .content").toggleClass("auto-height");
+});
+$("#view-2").click(function(){
+    $("#num-two").toggleClass("auto-height");
+});
+
+$("#view-3").click(function(){
+    $("#num-three").toggleClass("auto-height");
+});
