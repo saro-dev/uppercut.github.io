@@ -98,7 +98,7 @@ radius = width/2.5;
 
 
 $("#view").click(function(){
-    $(".services-container .secondary .content").toggleClass("auto-height");
+    $("#num-one").toggleClass("auto-height");
 });
 $("#view-2").click(function(){
     $("#num-two").toggleClass("auto-height");
